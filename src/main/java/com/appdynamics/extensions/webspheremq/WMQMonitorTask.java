@@ -95,8 +95,8 @@ public class WMQMonitorTask implements AMonitorTaskRunnable {
 		} catch (MQException mqe) {
 			logger.error(mqe.getMessage(), mqe);
 			//adding info logging for env which is throwing JSON exception in 9.3
-			logger.error("MQ env variable contents:");
-			logger.error(env.toString());
+			//logger.error("MQ env variable contents:");
+			//logger.error(env.toString());
 			throw new TaskExecutionException(mqe.getMessage());
 		}
 		return ibmQueueManager;
